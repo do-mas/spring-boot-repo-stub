@@ -1,19 +1,20 @@
 package app;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Reword {
+public class Task {
 
     @Id
     private int id;
     private String description;
 
-    public Reword() {
+    public Task() {
     }
 
-    public Reword(int id) {
+    public Task(int id) {
         this.id = id;
     }
 
@@ -21,7 +22,7 @@ public class Reword {
         return description;
     }
 
-    public Reword setDescription(String description) {
+    public Task setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -30,7 +31,7 @@ public class Reword {
         return id;
     }
 
-    public Reword setId(int id) {
+    public Task setId(int id) {
         this.id = id;
         return this;
     }
@@ -40,10 +41,10 @@ public class Reword {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Reword reword = (Reword) o;
+        Task task = (Task) o;
 
-        if (id != reword.id) return false;
-        return description != null ? description.equals(reword.description) : reword.description == null;
+        if (id != task.id) return false;
+        return description != null ? description.equals(task.description) : task.description == null;
     }
 
     @Override

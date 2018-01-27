@@ -1,19 +1,19 @@
 package app;
 
-public class RewordRepoStub implements RewordRepo {
+public class TaskRepoStub implements TaskRepo {
 
     @Override
-    public Reword findByDescriptionLike(String description) {
-        return new Reword(2).setDescription("before " + description + " after");
+    public Task findByDescriptionLike(String description) {
+        return new Task(2).setDescription("before " + description + " after");
     }
 
     @Override
-    public Reword findOne(Integer serializable) {
-        return new Reword(1);
+    public Task findOne(Integer serializable) {
+        return new Task(1);
     }
 
     @Override
-    public Reword save(Reword entity) {
+    public Task save(Task entity) {
         return null;
     }
 
@@ -28,12 +28,12 @@ public class RewordRepoStub implements RewordRepo {
     }
 
     @Override
-    public Iterable<Reword> findAll() {
+    public Iterable<Task> findAll() {
         return null;
     }
 
     @Override
-    public Iterable<Reword> findAll(Iterable iterable) {
+    public Iterable<Task> findAll(Iterable iterable) {
         return null;
     }
 
@@ -58,7 +58,7 @@ public class RewordRepoStub implements RewordRepo {
     }
 
     @Override
-    public void delete(Reword entity) {
+    public void delete(Task entity) {
 
     }
 

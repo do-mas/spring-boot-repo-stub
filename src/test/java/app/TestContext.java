@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Primary;
 public class TestContext {
 
     @Primary
-    @Bean(name = "reword")
-    public RewordRepo rewordRepo() {
-        return new RewordRepoStub();
+    @Bean(name = "taskq")
+    public TaskRepo taskRepo() {
+        return new TaskRepoStub();
     }
 }
