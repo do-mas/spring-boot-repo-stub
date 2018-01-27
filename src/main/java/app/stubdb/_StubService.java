@@ -9,14 +9,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class _StubService {
 
-    @Value("${stub.stubdb:true}")
+    @Value("${test.val:true}")
     private Boolean shouldUseStubDB;
 
     @Autowired
     private TaskRepo taskRepo;
 
     void createStubData(int id) {
-        taskRepo.save(new Task(id).setDescription("description number"));
-        taskRepo.save(new Task(id + 5).setDescription("description number 2"));
+        if (shouldUseStubDB) {
+            taskRepo.save(new Task(id).setDescription("description number"));
+            taskRepo.save(new Task(id + 5).setDescription("description number 2"));
+        }
     }
+
 }
