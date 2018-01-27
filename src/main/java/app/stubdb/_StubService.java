@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class _StubService {
 
-    @Value("${test.val:true}")
+    @Value("${database.stub:true}")
     private Boolean shouldUseStubDB;
 
     @Autowired
