@@ -19,6 +19,11 @@ public class TaskController {
         return taskRepo.findOne(id);
     }
 
+    @RequestMapping("/tasks/add/{id}")
+    public Task addTask(@PathVariable(value = "id") Integer id) {
+        return taskRepo.save(new Task(id).setDescription("description of " + id));
+    }
+
     @RequestMapping("/tasks")
     public Iterable<Task> getRewords() {
         return taskRepo.findAll();

@@ -1,4 +1,8 @@
 buildscript {
+    ext {
+        springBootVersion = '1.5.4.RELEASE'
+        springCloudConnectorsVersion = '1.2.4.RELEASE'
+    }
     repositories {
         mavenCentral()
     }
@@ -32,6 +36,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
+
+    // Spring Cloud Connectors
+    compile "org.springframework.cloud:spring-cloud-core:${springCloudConnectorsVersion}"
+    compile "org.springframework.cloud:spring-cloud-spring-service-connector:${springCloudConnectorsVersion}"
+    compile "org.springframework.cloud:spring-cloud-cloudfoundry-connector:${springCloudConnectorsVersion}"
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
 }

@@ -1,0 +1,7 @@
+---
+applications:
+- name: spring-app
+  memory: 1G
+  random-route: true
+  path: build/libs/reword-crud-0.1.0.jar
+
