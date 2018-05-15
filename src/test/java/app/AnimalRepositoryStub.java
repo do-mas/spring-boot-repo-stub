@@ -1,19 +1,22 @@
 package app;
 
-public class TaskRepoStub implements TaskRepo {
+import app.repo.Animal;
+import app.repo.AnimalRepository;
+
+public class AnimalRepositoryStub implements AnimalRepository {
 
     @Override
-    public Task findByDescriptionLike(String description) {
-        return new Task(2).setDescription("before " + description + " after");
+    public Animal findByDescriptionLike(String description) {
+        return new Animal(2).setDescription("before " + description + " after");
     }
 
     @Override
-    public Task findOne(Integer serializable) {
-        return new Task(1);
+    public Animal findOne(Integer serializable) {
+        return new Animal(1);
     }
 
     @Override
-    public Task save(Task entity) {
+    public Animal save(Animal entity) {
         return null;
     }
 
@@ -28,12 +31,12 @@ public class TaskRepoStub implements TaskRepo {
     }
 
     @Override
-    public Iterable<Task> findAll() {
+    public Iterable<Animal> findAll() {
         return null;
     }
 
     @Override
-    public Iterable<Task> findAll(Iterable iterable) {
+    public Iterable<Animal> findAll(Iterable iterable) {
         return null;
     }
 
@@ -58,7 +61,7 @@ public class TaskRepoStub implements TaskRepo {
     }
 
     @Override
-    public void delete(Task entity) {
+    public void delete(Animal entity) {
 
     }
 

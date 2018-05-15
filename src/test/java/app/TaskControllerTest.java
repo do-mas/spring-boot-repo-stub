@@ -1,10 +1,11 @@
 package app;
 
+import app.api.AnimalController;
+import app.repo.Animal;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,17 +16,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TaskControllerTest {
 
     @Autowired
-    public TaskController taskController;
+    public AnimalController taskController;
 
     @Test
     public void testGetRework() {
-        Task task = taskController.getReword(1);
-        Assert.assertEquals(task, new Task(1));
+        Animal animal = taskController.getReword(1);
+        Assert.assertEquals(animal, new Animal(1));
     }
 
     @Test
     public void testSearchRework() {
-        Task task = taskController.searchReword("text");
-        Assert.assertEquals(task, new Task(2).setDescription("before text after"));
+        Animal animal = taskController.searchReword("text");
+        Assert.assertEquals(animal, new Animal(2).setDescription("before text after"));
     }
 }

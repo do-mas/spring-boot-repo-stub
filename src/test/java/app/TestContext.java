@@ -1,5 +1,6 @@
 package app;
 
+import app.repo.AnimalRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -11,7 +12,7 @@ public class TestContext {
 
     @Primary
     @Bean(name = "taskq")
-    public TaskRepo taskRepo() {
-        return new TaskRepoStub();
+    public AnimalRepository taskRepo() {
+        return new AnimalRepositoryStub();
     }
 }

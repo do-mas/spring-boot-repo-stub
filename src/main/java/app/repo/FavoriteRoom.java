@@ -1,0 +1,16 @@
+package app.repo;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class FavoriteRoom {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private Long roomId;
+    private Long animalId;
+
+}
